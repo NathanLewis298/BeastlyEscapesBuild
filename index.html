@@ -14,45 +14,47 @@
 
     </script>
 <style>
-    body{
-      background-color: black;
-      overflow: hidden; /* Hide scrollbars */
-    }
 
-    .game-container {
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 */
-    position: relative;
-    }
+  body{
+    margin:0;
+    padding:0;
+  }
 
-    .webgl-content  {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    }
+  .gameContainer {
+    padding: 0;
+    background: black;
+    box-sizing: border-box;
+    resize: vertical;
+    overflow: auto;
+    max-height: 100vh;
+    width:auto;
+    display: block;
+  }
 
-    #unityContainer{
+  .game {
+    width:607px;
+    display: block;
+    margin: auto;
+  }
+
+  #unityContainer{
     width: 607px;
     height: 1080px;
-    padding: 50px;
+    
     text-align: center;
     background: black;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: center center;
-    }
+    display: block;
+  }
+
 
     
 </style>
 
   </head>
   <body>
-    <div class="game-container">
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 607px; height: 1080px"></div>
-     
+    <div class="gameContainer">
+      <div class="game">
+      <div id="unityContainer" style="width: 607px; height: 1080px;"></div>
     </div>
   </div>
   </body>
